@@ -1,6 +1,4 @@
 N=input("何番目の素数を知りたいですか？　")
-import time
-start=time.time()
 n=int(N)
 
 p=[2,3]
@@ -37,6 +35,3 @@ else:
         print("2番目の素数は3です")
     else:
         print("n番目の素数は"+str(p[-1])+"です")
-
-elapsed=time.time()-start
-print("time="+str(elapsed)+"s")
