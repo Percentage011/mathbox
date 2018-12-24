@@ -1,6 +1,6 @@
 import math,random
 
-x=random.randrange(1,7) #乱数の分布幅をランダムに決める
+x=random.randrange(1,8) #乱数の分布幅をランダムに決める
 a=random.randrange(1,10**x,2) #奇数をランダムに生成
 b=random.randrange(2,10**x+1,2) #偶数をランダムに生成
 
