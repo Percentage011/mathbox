@@ -1,6 +1,5 @@
 N=input("ピタゴラス数に分解しよう！>>>　")
 n=int(N)
-s=n #nを保存しておく
 
 import math
 
