@@ -37,6 +37,9 @@ if(n%4==1 and n!=1):
 if(len(p)!=0):
     print("できました！")
     for r in range(int(len(p)/2)):
-        print(p[r])
+        text=str(p[r])
+        if(math.gcd(p[r][0],p[r][1])==1):
+            text=text+"　←これは原始ピタゴラス数だよ！"
+        print(text)
 else:
     print("ごめんね……無理だったよ")
