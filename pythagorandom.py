@@ -1,10 +1,14 @@
 import math,random
 
-x=random.randrange(1,8) #乱数の分布幅をランダムに決める
-a=random.randrange(1,10**x,2) #奇数をランダムに生成
-b=random.randrange(2,10**x+1,2) #偶数をランダムに生成
+y=0
+while(y==0):
+    x=random.randrange(1,8) #乱数の分布幅をランダムに決める
+    a=random.randrange(1,10**x,2) #奇数をランダムに生成
+    b=random.randrange(2,10**x+1,2) #偶数をランダムに生成
+    if(math.gcd(a,b)==1):   #aとbが互いに素になるまでaとbを生成し続ける(原始ピタゴラス数になる)
+        y+=1
 
-n=a**2+b**2 #分解される形にする(必ずしも原始ピタゴラス数の組があるとは限らない)
+n=a**2+b**2 #分解される形にする
 
 p=[] #ピタゴラス数の組を入れておくリストのリスト。これ自体の要素はリスト
 m=1 #mの初期化
@@ -29,9 +33,6 @@ while((m*m)<n): #それぞれのmに対してcが平方数であるかを確認�
             del p[-1]
             i-=1
 
-if(len(p)==0):
-    print("ちょっと上手くいかなかったみたい……もう一度試してみてね")
-else:
-    print(str(n)+"を原始ピタゴラス数に分解しました")
-    for r in range(int(len(p)/2)):
-        print(p[r])
+print(str(n)+"を原始ピタゴラス数に分解しました")
+for r in range(int(len(p)/2)):
+    print(p[r])
