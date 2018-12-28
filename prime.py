@@ -34,4 +34,4 @@ else:
     if(n==2):
         print("2番目の素数は3です")
     else:
-        print("n番目の素数は"+str(p[-1])+"です")
+        print(str(n)+"番目の素数は"+str(p[-1])+"です")
