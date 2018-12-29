@@ -20,13 +20,12 @@ while((m*m)<n): #それぞれのmに対してcが平方数であるかを確認�
     if(math.sqrt(c)%1==0): #cが平方数のときに以下の処理をする
         i+=1
         p.append([])
-        q=abs(c-((m-1)*(m-1)))
-        t=(2*(m-1)*(math.sqrt(c)))
+        q=c-(m-1)*(m-1)
+        t=2*(m-1)*(math.sqrt(c))
         c=int(c)
         t=int(t)
         q=int(q)
-
-        if(math.gcd(c,t)==1 or math.gcd(c,q)==1):
+        if(math.gcd(c,t)==1 or math.gcd(c,q)==1 and q>0):
             p[i].append(t)
             p[i].append(q)
         else:
@@ -34,5 +33,5 @@ while((m*m)<n): #それぞれのmに対してcが平方数であるかを確認�
             i-=1
 
 print(str(n)+"を原始ピタゴラス数に分解しました")
-for r in range(int(len(p)/2)):
+for r in range(int(len(p))):
     print(p[r])
