@@ -1,31 +1,25 @@
-N = input("Factoring! ")
-
-import time
-start = time.time()
-
-n = int(N)
+N=input("Factoring! ")
+n=int(N)
 s=n
 
-p = []
-exp = []
+p=[]
+exp=[]
 
-k = 0
+two=0
 while(n%2==0):
-    k += 1
+    two+=1
     n=n/2
-
-if(k>0):
+if(two>0):
     p.append(2)
-    exp.append(k)
+    exp.append(two)
 
-l = 0
+three=0
 while(n%3==0):
-    l += 1
+    three+=1
     n=n/3
-
-if(l>0):
+if(three>0):
     p.append(3)
-    exp.append(l)
+    exp.append(three)
 
 i=1
 while(n>1):
@@ -34,7 +28,6 @@ while(n>1):
     while(n%(6*i-1)==0):
         n=n/(6*i-1)
         ae=ae+1
-
     if(ae!=0):
         p.append(6*i-1)
         exp.append(ae)
@@ -42,7 +35,6 @@ while(n>1):
     while(n%(6*i+1)==0):
         n=n/(6*i+1)
         be=be+1
-
     if(be!=0):
         p.append(6*i+1)
         exp.append(be)
@@ -62,6 +54,3 @@ if(s==1):
     print(str(s)+" = 1")
 else:
     print(ans[:-1])
-
-elapsed = time.time()-start
-print("time="+str(elapsed)+"s")
