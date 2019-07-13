@@ -1,4 +1,4 @@
-# mathematical_utility
+# mathbox
 Simple mathematical gadgets for play number.
 # Dependency
 Python3
